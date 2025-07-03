@@ -240,4 +240,3 @@ with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
         for file in files:
             z.write(os.path.join(root, file),
                     arcname=os.path.relpath(os.path.join(root, file), bundle_dir))
-zip_path
