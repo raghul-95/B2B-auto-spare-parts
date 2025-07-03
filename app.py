@@ -38,8 +38,7 @@ pio.templates.default = "c_suite"
 
 # ─── CONFIG ────────────────────────────────────────────────
 DEFAULT_URL = (
-    "https://raw.githubusercontent.com/<user>/<repo>/main/"
-    "Data_Analysis_R_Survey_Enhanced.csv"
+    "https://raw.githubusercontent.com/raghul-95/B2B-auto-spare-parts/refs/heads/main/Data_Analysis_R_Survey_Enhanced.csv"
 )
 st.set_page_config(page_title="Auto-Parts Analytics Dashboard", layout="wide")
 
