@@ -22,7 +22,7 @@ import base64, io, warnings, textwrap
 warnings.filterwarnings('ignore')
 
 # ---------------- CONFIG -----------------
-DEFAULT_URL = "https://raw.githubusercontent.com/<user>/<repo>/main/Data_Analysis_R_Survey_Enhanced.csv"
+DEFAULT_URL = "https://raw.githubusercontent.com/raghul-95/B2B-auto-spare-parts/refs/heads/main/Data_Analysis_R_Survey_Enhanced.csv"
 st.set_page_config(page_title="Auto‑Parts Analytics Pro", layout="wide")
 # -----------------------------------------
 
