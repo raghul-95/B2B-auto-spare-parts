@@ -228,4 +228,3 @@ with tabs[4]:
                                  mode="lines", line=dict(dash="dash"),
                                  showlegend=False))
         st.plotly_chart(fig, use_container_width=True)
-""")
