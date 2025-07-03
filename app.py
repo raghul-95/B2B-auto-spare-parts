@@ -102,12 +102,14 @@ with tabs[1]:
                 pipe = Pipeline([("prep", preproc), ("model", mdl)])
                 pipe.fit(X_tr, y_tr)
                 y_pred = pipe.predict(X_ts)
-                rep = classification_report(y_ts, y_pred, output_dict=True, zero_division=0)["weighted avg"]
-                report_rows.append({"Model": name,
-                                    "Accuracy": round(rep["accuracy"],3),
-                                    "Precision": round(rep["precision"],3),
-                                    "Recall": round(rep["recall"],3),
-                                    "F1": round(rep["f1-score"],3)})
+         report = classification_report(y_ts, y_pred, output_dict=True, zero_division=0)
+rows.append({
+    "Model": n,
+    "Accuracy": round(report["accuracy"], 3),
+    "Precision": round(report["weighted avg"]["precision"], 3),
+    "Recall": round(report["weighted avg"]["recall"], 3),
+    "F1": round(report["weighted avg"]["f1-score"], 3),
+})
             st.dataframe(pd.DataFrame(report_rows).set_index("Model"))
 
 # -------------- 3. Clustering --------------------
