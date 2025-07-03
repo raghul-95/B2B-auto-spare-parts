@@ -229,14 +229,3 @@ with tabs[4]:
                                  showlegend=False))
         st.plotly_chart(fig, use_container_width=True)
 """)
-
-with open(os.path.join(bundle_dir,"app.py"), "w") as f:
-    f.write(app_py)
-
-# Re-zip
-zip_path = "/mnt/data/auto_parts_dashboard.zip"
-with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
-    for root, dirs, files in os.walk(bundle_dir):
-        for file in files:
-            z.write(os.path.join(root, file),
-                    arcname=os.path.relpath(os.path.join(root, file), bundle_dir))
