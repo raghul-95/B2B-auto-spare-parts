@@ -16,6 +16,16 @@ from sklearn.cluster import KMeans
 from mlxtend.frequent_patterns import apriori, association_rules
 import base64, warnings
 warnings.filterwarnings('ignore')
+import urllib.error  # <- at top with the imports
+
+@st.cache_data(ttl=3600)
+def load_csv(src):
+    try:
+        return pd.read_csv(src)
+    except (urllib.error.HTTPError, urllib.error.URLError) as e:
+        st.error(f"❌ Unable to fetch CSV from URL – {e}. "
+                 "Check that you used the **Raw** link or upload the file instead.")
+        st.stop()
 
 DEFAULT_URL = "https://raw.githubusercontent.com/raghul-95/B2B-auto-spare-parts/refs/heads/main/Data_Analysis_R_Survey_Enhanced.csv"
 st.set_page_config(page_title="Auto‑Parts Analytics Pro‑v6", layout="wide")
