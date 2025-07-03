@@ -7,3 +7,4 @@ mlxtend>=0.23.0
 matplotlib>=3.8.0
 seaborn>=0.13.0
 statsmodels>=0.14.0
+scipy>=1.11.0

@@ -1,1 +1,1 @@
-Patch: added statsmodels to requirements to satisfy Plotly trendline=ols.
+v6 adds scipy for statsmodels and fixes blank funnel plot by dynamically using Sales_Stage values.
