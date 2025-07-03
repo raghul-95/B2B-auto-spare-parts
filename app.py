@@ -18,7 +18,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 import base64, io
 
 # -------------- EDIT THIS LINE -----------------------------------
-DEFAULT_URL = "https://raw.githubusercontent.com/<user>/<repo>/main/Data_Analysis_R_Survey_Enhanced.csv"
+DEFAULT_URL = "https://raw.githubusercontent.com/raghul-95/B2B-auto-spare-parts/refs/heads/main/Data_Analysis_R_Survey_Enhanced.csv"
 # -----------------------------------------------------------------
 
 st.set_page_config(page_title="Auto‑Parts Lead Analytics", layout="wide")
