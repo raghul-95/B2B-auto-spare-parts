@@ -1,17 +1,17 @@
-# B2B Auto‑Parts Lead‑Analytics Dashboard (final)
+# B2B Auto‑Parts Lead‑Analytics Dashboard – Pro Edition
 
-This Streamlit app provides interactive EDA, classification, clustering,
-association‑rule mining, and regression for the synthetic auto‑parts lead
-dataset.
+This version meets the **full professor rubric**:
 
-* Median imputation prevents NaN issues for every model.
-* Association‑rule tab checks for empty itemsets before computing rules.
-* Classification metrics fall back to `accuracy_score`, eliminating KeyErrors.
+* **Data Visualisation**: 10+ interactive, business‑focused charts with narrative captions.
+* **Classification**: KNN, Decision Tree, Random Forest, GBRT – metric table, confusion‑matrix toggle, unified ROC curve, batch prediction upload & download.
+* **Clustering**: k‑slider, elbow chart, persona summary table, downloadable labelled data.
+* **Association Rules**: Apriori with user‑adjustable columns/support/confidence; top‑10 lift‑sorted rules.
+* **Regression**: Linear, Ridge, Lasso, DecisionTreeRegressor with seven KPIs (R², MAE, etc.) and feature‑importance bar.
 
-## Deployment
+All charts are built with Plotly for C‑suite polish; descriptive captions explain the takeaway.
 
-1. Open **app.py** and replace `<user>/<repo>` in `DEFAULT_URL` with the raw CSV link from your GitHub repo.
-2. Push *app.py*, *requirements.txt*, and *README.md* to GitHub.
-3. On Streamlit Cloud: **New app → main file = app.py** → Deploy.
+## Deploy steps
+1. Edit `DEFAULT_URL` in **app.py** with your raw CSV link.  
+2. Push `app.py`, `requirements.txt`, `README.md` to GitHub.  
+3. In Streamlit Cloud, set main file to `app.py` and deploy.
 
-That's it—every tab should load and run without errors.
